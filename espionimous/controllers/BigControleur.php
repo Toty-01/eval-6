@@ -91,7 +91,7 @@ class BigControleur{
         require_once "views/displayDetail/hideoutDetail.view.php";
     }
 
-    // fonction validation et CRUD mission
+    // fonction de validation
     public function validateMissionAdd(){
         $typesOfMission = $this->typeOfMissionController->giveTypesOfMission();
         $specialities = $this->specialityController->giveSpecialities();
@@ -171,7 +171,7 @@ class BigControleur{
         require_once "views/addEntity/missionAdd.view.php";
     }
 
-    public function addMission($title, $description, $status,   $codeName, $codeCountry, $country, $typeOfMission, $speciality, $spy, $target, $contact, $hideout, $startDate, $endDate){
+    public function addMission($title, $description, $status, $codeName, $codeCountry, $country, $typeOfMission, $speciality, $spy, $target, $contact, $hideout, $startDate, $endDate){
 
         $this->missionController->addMissionInBdd($title, $description, $status, $codeName, $codeCountry, $country, $startDate, $endDate);
 
